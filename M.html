@@ -36,6 +36,7 @@
   width: 23%;
   border-radius: 8px;
   margin: 0;
+  cursor:pointer;
 }
 
 
@@ -64,7 +65,31 @@
       margin: 0 15px;
       font-size: 18px;
     }
-  </style>
+	  <style>
+  .fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .fullscreen img {
+    max-width: 90%;
+    max-height: 90%;
+  }
+</style>
+
+<script>
+  function toggleFullscreen(img) {
+    img.classList.toggle('fullscreen');
+  }
+</script>
+
 </head>
 
 <header>
@@ -79,10 +104,9 @@
 <h1>La mitose</h1>
 
 <div class="image-container">
-  <img class="mitosis-image" src="https://media.gettyimages.com/id/641457126/photo/mitosis-anaphase.jpg?s=612x612&w=0&k=20&c=aUryQOMMtaIoHMFdvx9CvPeQFaxEc2KBwMNo1dyQffk=" alt="Mitosis Image 1">
-  <img class="mitosis-image" src="https://media.gettyimages.com/id/641457136/photo/mitosis-prophase.jpg?s=612x612&w=0&k=20&c=udmLzrzm37eh0Z7BTGsTq1F23YwFFDeYUVKw9XyT4Wc=" alt="Mitosis Image 3">
-    <img class="mitosis-image" src=" alt="Mitosis Image p">
- <img class="mitosis-image" src="https://media.gettyimages.com/id/139803955/photo/meiosis-1-telophase-1-lilium-400x-at-35mm-the-cell-plate-is-very-evident.jpg?s=612x612&w=0&k=20&c=H7aAj_7rA1VLkeTX-L_MvsHYdw-Ryq4gT5xKPNfIRNo=" alt="Mitosis Image 5">
+  <img class="mitosis-image" src="https://media.gettyimages.com/id/641457126/photo/mitosis-anaphase.jpg?s=612x612&w=0&k=20&c=aUryQOMMtaIoHMFdvx9CvPeQFaxEc2KBwMNo1dyQffk=" alt="Mitosis Image 1" onclick="Togglefullscreen(this)">
+  <img class="mitosis-image" src="https://media.gettyimages.com/id/641457136/photo/mitosis-prophase.jpg?s=612x612&w=0&k=20&c=udmLzrzm37eh0Z7BTGsTq1F23YwFFDeYUVKw9XyT4Wc=" alt="Mitosis Image 3" onclick="Togglefullscreen(this)">
+ <img class="mitosis-image" src="https://media.gettyimages.com/id/139803955/photo/meiosis-1-telophase-1-lilium-400x-at-35mm-the-cell-plate-is-very-evident.jpg?s=612x612&w=0&k=20&c=H7aAj_7rA1VLkeTX-L_MvsHYdw-Ryq4gT5xKPNfIRNo=" alt="Mitosis Image 5" onclick="Togglefullscreen(this)">
 
 </div>
 
